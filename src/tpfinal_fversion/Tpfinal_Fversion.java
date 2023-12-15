@@ -3,10 +3,6 @@ package tpfinal_fversion;
 
 //import com.mysql.cj.xdevapi.Statement;
 //import com.sun.jdi.connect.spi.Connection;
-
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
 import java.sql.*;
 import java.util.Scanner;
 import java.io.*;
@@ -27,7 +23,7 @@ public class Tpfinal_Fversion {
 		Connection con = null;
                con = DriverManager.getConnection(url, username, password);
 		
-		Statement stmt = con.createStatement();
+		 Statement stmt =(Statement) con.createStatement();
 		ResultSet rs;
 		PreparedStatement st;
 		
@@ -109,10 +105,9 @@ public class Tpfinal_Fversion {
 				break;
 			case 4:
 				System.out.println("4. IMPRIME TODOS LOS REGISTROS");
-				qry="SELECT id,nombre,edad,ciudad from users";
+				qry="SELECT ID,Nombre,Edad,Ciudad from users";
 				//rs=stmt.executeQuery(qry);
-                                st= con.prepareStatement(qry);
-                                rs = st.executeQuery();
+                                 rs=stmt.executeQuery(qry);
 				
                                 //String filePath = "oradores.xml";
                                 String filePath = "D:" + File.separator + "Codo-codo" + File.separator + "fullStackJava" + File.separator + "Java" + File.separator + "tpfinal_Fversion" + File.separator + "oradores.xml";
