@@ -36,11 +36,11 @@ public class Tpfinal_Fversion {
 		
 		while(true)
 		{
-			System.out.println("MySQL Java CRUD");
-			System.out.println("1. Insert");
-			System.out.println("2. Update");
-			System.out.println("3. Delete");
-			System.out.println("4. Select");
+			System.out.println("---------------------- CODO-CODO CRUD ------------------------------");
+			System.out.println("1. Registrar");
+			System.out.println("2. Actualizar");
+			System.out.println("3. Eliminar");
+			System.out.println("4. Listar todo");
 			System.out.println("5. Salir");
 			System.out.print("Ingrese una opción: ");
 			choice = in.nextInt();
